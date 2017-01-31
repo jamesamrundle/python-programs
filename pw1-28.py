@@ -7,8 +7,8 @@ import os.path
 
           
 def listfill():
-    account=input('Name of account? : ')
-    acctlist.append(account)
+    account=input('Name of account? : ')   #The only reason this doesnt overwrite the earlier "account"
+    acctlist.append(account)                      #is because it is in a function right?
     pwordlist.append(input(' Please enter the password for this account....'))
     print(' The account ' + account + ' and its password have been added. Thank you.')
     repeat = input('Add more?')
@@ -56,7 +56,7 @@ if len(sys.argv) < 2:
     sys.exit()
 
 account = sys.argv[1]  # first command line argument is account name
-
+#this bothers me, i feel like it should be at the beginning or end, but it only works here haha. Any ideas?
 #------------------------------------------
 
 if acctlist == []:
@@ -86,6 +86,6 @@ else:
 
 
 
-
-account = sys.argv[1]  # first command line argument is account name
+                              
+#account = sys.argv[1]  # first command line argument is account name
     
